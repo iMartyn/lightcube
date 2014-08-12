@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:lightcube-cache
 EELAYER 27 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "8 aug 2014"
+Date "12 aug 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -131,9 +130,9 @@ Text Label 8500 4200 2    60   ~ 0
 DI
 Text Label 8600 2500 2    60   ~ 0
 12v
-Text Label 8600 2600 2    60   ~ 0
-Rl
 Text Label 8600 2700 2    60   ~ 0
+Rl
+Text Label 8600 2600 2    60   ~ 0
 Gl
 Text Label 8600 2800 2    60   ~ 0
 Bl
@@ -141,9 +140,9 @@ Text Label 7700 3000 0    60   ~ 0
 5v
 Text Label 7700 3500 0    60   ~ 0
 GND
-Text Label 5000 3000 2    60   ~ 0
-R
 Text Label 5000 3400 2    60   ~ 0
+R
+Text Label 5000 3000 2    60   ~ 0
 G
 Text Label 5000 3100 2    60   ~ 0
 B
@@ -163,17 +162,17 @@ Wire Wire Line
 Connection ~ 7400 1750
 Text Label 6350 1750 2    60   ~ 0
 GND
-Text Label 6450 1200 2    60   ~ 0
-Rl
 Text Label 7400 1200 2    60   ~ 0
+Rl
+Text Label 6450 1200 2    60   ~ 0
 Gl
 Text Label 8050 1200 2    60   ~ 0
 Bl
 Text Label 7750 1400 2    60   ~ 0
 B
-Text Label 7100 1400 2    60   ~ 0
-G
 Text Label 6150 1400 2    60   ~ 0
+G
+Text Label 7100 1400 2    60   ~ 0
 R
 $Comp
 L ZENER D1
@@ -208,7 +207,6 @@ Wire Wire Line
 Wire Wire Line
 	5000 2000 5400 2000
 Connection ~ 5100 2000
-NoConn ~ 5000 3500
 $Comp
 L C C1
 U 1 1 53CF172E
@@ -248,4 +246,41 @@ Wire Wire Line
 	5750 2050 5750 1400
 Wire Wire Line
 	5750 1400 5100 1400
+$Comp
+L CONN_6 P4
+U 1 1 53EA3163
+P 5350 4050
+F 0 "P4" V 5300 4050 50  0000 C CNN
+F 1 "PROG" V 5400 4050 50  0000 C CNN
+F 2 "" H 5350 4050 60  0000 C CNN
+F 3 "" H 5350 4050 60  0000 C CNN
+	1    5350 4050
+	1    0    0    -1  
+$EndComp
+Text Label 5000 3500 2    60   ~ 0
+RESET
+Text Label 5000 3900 2    60   ~ 0
+RESET
+Wire Wire Line
+	4600 3200 5000 3200
+Text Label 4600 3200 2    60   ~ 0
+P_SCK
+Text Label 4600 3100 2    60   ~ 0
+P_MISO
+Text Label 4600 3000 2    60   ~ 0
+P_MOSI
+Wire Wire Line
+	5000 3000 4600 3000
+Wire Wire Line
+	4600 3100 5000 3100
+Text Label 5000 4000 2    60   ~ 0
+P_SCK
+Text Label 5000 4100 2    60   ~ 0
+P_MISO
+Text Label 5000 4200 2    60   ~ 0
+P_MOSI
+Text Label 5000 3800 2    60   ~ 0
+5v
+Text Label 5000 4300 2    60   ~ 0
+GND
 $EndSCHEMATC
